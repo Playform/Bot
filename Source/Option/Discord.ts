@@ -63,6 +63,7 @@ export const Clients: Client[] = [
 					console.log("Registered all commands");
 				} else {
 					console.error("Error registering commands");
+
 					const text = await response.text();
 					console.error(text);
 				}
