@@ -1,12 +1,6 @@
-export declare const object: <T extends import("zod").ZodRawShape>(shape: T, params?: import("zod").RawCreateParams) => import("zod").ZodObject<T, "strip", import("zod").ZodTypeAny, { [k in keyof import("zod").objectUtil.addQuestionMarks<import("zod").baseObjectOutputType<T>, any>]: import("zod").objectUtil.addQuestionMarks<import("zod").baseObjectOutputType<T>, any>[k]; }, { [k_1 in keyof import("zod").baseObjectInputType<T>]: import("zod").baseObjectInputType<T>[k_1]; }>, string: (params?: ({
-    errorMap?: import("zod").ZodErrorMap | undefined;
-    invalid_type_error?: string | undefined;
-    required_error?: string | undefined;
-    message?: string | undefined;
-    description?: string | undefined;
-} & {
-    coerce?: true | undefined;
-}) | undefined) => import("zod").ZodString;
+export declare const object: <T extends import("zod").ZodRawShape>(shape: T, params?: import("zod").RawCreateParams) => import("zod").ZodObject<T, "strip", import("zod").ZodTypeAny, import("zod").objectOutputType<T, import("zod").ZodTypeAny, "strip">, import("zod").objectInputType<T, import("zod").ZodTypeAny, "strip">>, string: (params?: import("zod").RawCreateParams & {
+    coerce?: true;
+}) => import("zod").ZodString;
 declare const _default: import("zod").ZodObject<{
     DISCORD_APPLICATION_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
     DISCORD_CLIENT_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
